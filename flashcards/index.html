@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Game App</title>
+  <title>Flashcard App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header> <a href="../index.html"><button>Kategorie</button></a></header>
-<main>
-  <div class="quiz">
-    <h2 id="hint">Hint will appear here</h2>
-    <div class="options" id="options">
-      <!-- Buttons will be generated here -->
+  <main>
+    <div class="flashcard">
+    <h1 id="word">Word</h1>
+    <p id="hint">Hint will appear here</p>
+    <div class="controls">
+      <button id="reveal">Reveal</button>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
     </div>
   </div>
-</main>
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
