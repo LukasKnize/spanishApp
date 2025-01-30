@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spanish Number Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f3f4f6;
+      }
+      .card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      .number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+      .feedback {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Spanish Number Game</h1>
+      <div class="number" id="number">0</div>
+      <input type="text" id="input" class="input" placeholder="Type the month in Spanish" />
+      <button class="button" id="check">Check</button>
+      <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script>
+      const numberToSpanish = (num) => {
+        const months = [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+        ];
+        return months[num - 1]; // Adjust for 1-based numbering
+      };
+
+      const numberEl = document.getElementById("number");
+      const inputEl = document.getElementById("input");
+      const feedbackEl = document.getElementById("feedback");
+      const checkButton = document.getElementById("check");
+
+      let currentNumber = Math.floor(Math.random() * 12) + 1; // Generate number between 1-12
+      numberEl.textContent = currentNumber;
+
+      checkButton.addEventListener("click", () => {
+        const userAnswer = inputEl.value.trim().toLowerCase();
+        const correctAnswer = numberToSpanish(currentNumber).toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+          feedbackEl.textContent = "Correct! 🎉";
+          currentNumber = Math.floor(Math.random() * 12) + 1; // Generate new number
+          numberEl.textContent = currentNumber;
+          inputEl.value = "";
+        } else {
+          feedbackEl.textContent = "Wrong! Try again. ❌";
+        }
+      });
+    </script>
+  </body>
+</html>
