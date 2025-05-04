@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spanish Verb Practice</title>
+  <title>Spanish Verb Trainer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,7 +48,7 @@
   <div class="card">
     <h1>Spanish Verb Trainer</h1>
     <div class="prompt" id="question"></div>
-    <input type="text" id="answer" placeholder="Type the conjugation..." />
+    <input type="text" id="answer" placeholder="Type the conjugation..." autocomplete="off" />
     <br />
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
@@ -119,11 +119,16 @@
 
     const pronouns = ["yo", "tú", "él/ella/usted", "nosotros", "vosotros", "ellos/ellas/ustedes"];
     let currentVerb, currentPronounIndex;
+    let attempts = 0;
+    let locked = false;
 
     function newQuestion() {
       const verbData = verbs[Math.floor(Math.random() * verbs.length)];
       currentVerb = verbData;
       currentPronounIndex = Math.floor(Math.random() * 6);
+      attempts = 0;
+      locked = false;
+
       document.getElementById("question").innerText = `${verbData[0]} — ${pronouns[currentPronounIndex]}`;
       document.getElementById("answer").value = "";
       document.getElementById("feedback").innerText = "";
@@ -131,21 +136,40 @@
     }
 
     function checkAnswer() {
-      const userInput = document.getElementById("answer").value.trim().toLowerCase();
+      if (locked) return;
+
+      const inputElement = document.getElementById("answer");
+      let userInput = inputElement.value.trim().toLowerCase();
       const correct = currentVerb[currentPronounIndex + 1].toLowerCase();
       const feedback = document.getElementById("feedback");
 
       if (userInput === correct) {
-        feedback.innerText = "Correct!";
+        feedback.innerText = "✅ Correct!";
         feedback.className = "correct";
+        locked = true;
         setTimeout(newQuestion, 1000);
       } else {
-        feedback.innerText = `Incorrect. Try again.`;
-        feedback.className = "incorrect";
+        attempts++;
+        if (attempts >= 3) {
+          feedback.innerText = `❌ Incorrect. The correct answer was: "${correct}".`;
+          feedback.className = "incorrect";
+          locked = true;
+          setTimeout(newQuestion, 2000);
+        } else {
+          feedback.innerText = `❌ Try again (${attempts}/3).`;
+          feedback.className = "incorrect";
+        }
       }
     }
 
-    // Start with a question
+    // Allow pressing "Enter" to submit
+    document.getElementById("answer").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    // Start the game
     newQuestion();
   </script>
 </body>
