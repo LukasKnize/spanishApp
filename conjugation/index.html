@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spanish Verb Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      margin: auto;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    .prompt {
+      font-size: 1.2em;
+      margin: 1em 0;
+    }
+    input {
+      font-size: 1.2em;
+      padding: 0.5em;
+      width: 80%;
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Spanish Verb Trainer</h1>
+    <div class="prompt" id="question"></div>
+    <input type="text" id="answer" placeholder="Type the conjugation..." />
+    <br />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    const verbs = [
+      ["ir", "voy", "vas", "va", "vamos", "vais", "van"],
+      ["vivir", "vivo", "vives", "vive", "vivimos", "vivís", "viven"],
+      ["hablar", "hablo", "hablas", "habla", "hablamos", "habláis", "hablan"],
+      ["comer", "como", "comes", "come", "comemos", "coméis", "comen"]
+    ];
+
+    const pronouns = ["yo", "tú", "él/ella/usted", "nosotros", "vosotros", "ellos/ellas/ustedes"];
+    let currentVerb, currentPronounIndex;
+
+    function newQuestion() {
+      const verbData = verbs[Math.floor(Math.random() * verbs.length)];
+      currentVerb = verbData;
+      currentPronounIndex = Math.floor(Math.random() * 6);
+      document.getElementById("question").innerText = `${verbData[0]} — ${pronouns[currentPronounIndex]}`;
+      document.getElementById("answer").value = "";
+      document.getElementById("feedback").innerText = "";
+      document.getElementById("answer").focus();
+    }
+
+    function checkAnswer() {
+      const userInput = document.getElementById("answer").value.trim().toLowerCase();
+      const correct = currentVerb[currentPronounIndex + 1].toLowerCase();
+      const feedback = document.getElementById("feedback");
+
+      if (userInput === correct) {
+        feedback.innerText = "Correct!";
+        feedback.className = "correct";
+        setTimeout(newQuestion, 1000);
+      } else {
+        feedback.innerText = `Incorrect. Try again.`;
+        feedback.className = "incorrect";
+      }
+    }
+
+    // Start with a question
+    newQuestion();
+  </script>
+</body>
+</html>
