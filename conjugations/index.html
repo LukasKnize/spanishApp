@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spanish Verb Conjugation Trainer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 2em;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 0.4em;
+      font-size: 1em;
+      width: 60%;
+    }
+    table {
+      margin: 1em auto;
+      width: 100%;
+      max-width: 400px;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      margin-top: 1em;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    .feedback-cell {
+      width: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Conjugate the Verb</h2>
+    <h3 id="verb"></h3>
+    <form id="form" onsubmit="return false;">
+      <table>
+        <tbody id="inputsTable">
+          <!-- Dynamically filled -->
+        </tbody>
+      </table>
+      <button onclick="checkAnswers()">Submit</button>
+      <p id="resultMsg"></p>
+    </form>
+  </div>
+
+  <script>
+    const verbs = [
+      ["ir", "voy", "vas", "va", "vamos", "vais", "van"],
+  ["seguir", "sigo", "sigues", "sigue", "seguimos", "seguís", "siguen"],
+  ["salir", "salgo", "sales", "sale", "salimos", "salís", "salen"],
+  ["bajarse", "me bajo", "te bajas", "se baja", "nos bajamos", "os bajáis", "se bajan"],
+  ["cambiar", "cambio", "cambias", "cambia", "cambiamos", "cambiáis", "cambian"],
+  ["quedar", "quedo", "quedas", "queda", "quedamos", "quedáis", "quedan"],
+  ["abrir", "abro", "abres", "abre", "abrimos", "abrís", "abren"],
+  ["cerrar", "cierro", "cierras", "cierra", "cerramos", "cerráis", "cierran"],
+  ["salir", "salgo", "sales", "sale", "salimos", "salís", "salen"],
+  ["llegar", "llego", "llegas", "llega", "llegamos", "llegáis", "llegan"],
+  ["volver", "vuelvo", "vuelves", "vuelve", "volvemos", "volvéis", "vuelven"],
+  ["empezar", "empiezo", "empiezas", "empieza", "empezamos", "empezáis", "empiezan"],
+  ["tener", "tengo", "tienes", "tiene", "tenemos", "tenéis", "tienen"],
+  ["querer", "quiero", "quieres", "quiere", "queremos", "queréis", "quieren"],
+  ["poder", "puedo", "puedes", "puede", "podemos", "podéis", "pueden"],
+  ["hacer", "hago", "haces", "hace", "hacemos", "hacéis", "hacen"],
+  ["jugar", "juego", "juegas", "juega", "jugamos", "jugáis", "juegan"],
+  ["levantarse", "me levanto", "te levantas", "se levanta", "nos levantamos", "os levantáis", "se levantan"],
+  ["despertarse", "me despierto", "te despiertas", "se despierta", "nos despertamos", "os despertáis", "se despiertan"],
+  ["lavarse", "me lavo", "te lavas", "se lava", "nos lavamos", "os laváis", "se lavan"],
+  ["vestirse", "me visto", "te vistes", "se viste", "nos vestimos", "os vestís", "se visten"],
+  ["bañarse", "me baño", "te bañas", "se baña", "nos bañamos", "os bañáis", "se bañan"],
+  ["ducharse", "me ducho", "te duchas", "se ducha", "nos duchamos", "os ducháis", "se duchan"],
+  ["acostarse", "me acuesto", "te acuestas", "se acuesta", "nos acostamos", "os acostáis", "se acuestan"],
+  ["gustar", "me gusta", "te gusta", "le gusta", "nos gusta", "os gusta", "les gusta"],
+  ["gustar (plural)", "me gustan", "te gustan", "le gustan", "nos gustan", "os gustan", "les gustan"],
+  ["pedir", "pido", "pides", "pide", "pedimos", "pedís", "piden"],
+  ["poner", "pongo", "pones", "pone", "ponemos", "ponéis", "ponen"],
+  ["preferir", "prefiero", "prefieres", "prefiere", "preferimos", "preferís", "prefieren"],
+  ["saber", "sé", "sabes", "sabe", "sabemos", "sabéis", "saben"],
+  ["parecer", "parezco", "pareces", "parece", "parecemos", "parecéis", "parecen"],
+  ["quedar", "quedo", "quedas", "queda", "quedamos", "quedáis", "quedan"],
+["ser", "soy", "eres", "es", "somos", "sois", "son"],
+  ["estar", "estoy", "estás", "está", "estamos", "estáis", "están"],
+  ["tener", "tengo", "tienes", "tiene", "tenemos", "tenéis", "tienen"],
+  ["hacer", "hago", "haces", "hace", "hacemos", "hacéis", "hacen"],
+  ["poder", "puedo", "puedes", "puede", "podemos", "podéis", "pueden"],
+  ["decir", "digo", "dices", "dice", "decimos", "decís", "dicen"],
+  ["ver", "veo", "ves", "ve", "vemos", "veis", "ven"],
+  ["dar", "doy", "das", "da", "damos", "dais", "dan"],
+  ["saber", "sé", "sabes", "sabe", "sabemos", "sabéis", "saben"],
+  ["querer", "quiero", "quieres", "quiere", "queremos", "queréis", "quieren"],
+  ["llegar", "llego", "llegas", "llega", "llegamos", "llegáis", "llegan"],
+  ["pasar", "paso", "pasas", "pasa", "pasamos", "pasáis", "pasan"],
+  ["deber", "debo", "debes", "debe", "debemos", "debéis", "deben"],
+  ["poner", "pongo", "pones", "pone", "ponemos", "ponéis", "ponen"],
+  ["parecer", "parezco", "pareces", "parece", "parecemos", "parecéis", "parecen"],
+  ["quedar", "quedo", "quedas", "queda", "quedamos", "quedáis", "quedan"],
+  ["creer", "creo", "crees", "cree", "creemos", "creéis", "creen"],
+  ["hablar", "hablo", "hablas", "habla", "hablamos", "habláis", "hablan"],
+  ["llevar", "llevo", "llevas", "lleva", "llevamos", "lleváis", "llevan"],
+  ["dejar", "dejo", "dejas", "deja", "dejamos", "dejáis", "dejan"],
+  ["seguir", "sigo", "sigues", "sigue", "seguimos", "seguís", "siguen"],
+  ["encontrar", "encuentro", "encuentras", "encuentra", "encontramos", "encontráis", "encuentran"],
+  ["llamar", "llamo", "llamas", "llama", "llamamos", "llamáis", "llaman"],
+  ["vivir", "vivo", "vives", "vive", "vivimos", "vivís", "viven"],
+  ["necesitar", "necesito", "necesitas", "necesita", "necesitamos", "necesitáis", "necesitan"],
+  ["trabajar", "trabajo", "trabajas", "trabaja", "trabajamos", "trabajáis", "trabajan"],
+  ["usar", "uso", "usas", "usa", "usamos", "usáis", "usan"]
+    ];
+
+    const pronouns = ["yo", "tú", "él/ella/usted", "nosotros", "vosotros", "ellos/ellas/ustedes"];
+    let currentVerb;
+    let attempts = 0;
+
+    function loadVerb() {
+      const verbData = verbs[Math.floor(Math.random() * verbs.length)];
+      currentVerb = verbData;
+      attempts = 0;
+      document.getElementById("verb").innerText = verbData[0];
+      const tbody = document.getElementById("inputsTable");
+      tbody.innerHTML = "";
+
+      pronouns.forEach((pronoun, i) => {
+        const row = document.createElement("tr");
+
+        const pronounCell = document.createElement("td");
+        pronounCell.textContent = pronoun;
+
+        const inputCell = document.createElement("td");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.id = `input${i}`;
+        input.autocomplete = "off";
+        inputCell.appendChild(input);
+
+        const feedbackCell = document.createElement("td");
+        feedbackCell.className = "feedback-cell";
+        feedbackCell.id = `feedback${i}`;
+
+        row.appendChild(pronounCell);
+        row.appendChild(inputCell);
+        row.appendChild(feedbackCell);
+        tbody.appendChild(row);
+      });
+
+      document.getElementById("resultMsg").innerText = "";
+    }
+
+    function checkAnswers() {
+      let correctCount = 0;
+
+      for (let i = 0; i < 6; i++) {
+        const input = document.getElementById(`input${i}`);
+        const feedback = document.getElementById(`feedback${i}`);
+        const answer = input.value.trim().toLowerCase();
+        const correct = currentVerb[i + 1].toLowerCase();
+
+        if (answer === correct) {
+          feedback.textContent = "✅";
+          feedback.className = "correct";
+        } else {
+          feedback.textContent = "❌";
+          feedback.className = "incorrect";
+        }
+
+        if (answer === correct) correctCount++;
+      }
+
+      if (correctCount === 6) {
+        document.getElementById("resultMsg").innerText = "✅ All correct! Loading next verb...";
+        setTimeout(loadVerb, 1500);
+      } else {
+        attempts++;
+        if (attempts >= 3) {
+          document.getElementById("resultMsg").innerText = "❌ Showing correct answers...";
+          for (let i = 0; i < 6; i++) {
+            const input = document.getElementById(`input${i}`);
+            input.value = currentVerb[i + 1];
+          }
+          setTimeout(loadVerb, 2500);
+        } else {
+          document.getElementById("resultMsg").innerText = `❌ ${6 - correctCount} incorrect. Try again (${attempts}/3)`;
+        }
+      }
+    }
+
+    loadVerb();
+  </script>
+</body>
+</html>
