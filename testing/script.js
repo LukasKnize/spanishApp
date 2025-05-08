@@ -382,16 +382,1724 @@ let flashcards = [
   { wordToGuess: "unas botas", hint: "Kozačky / boty", category: ["obleceni"] },
   { wordToGuess: "unas deportivas", hint: "Sportovní boty", category: ["obleceni"] },
   { wordToGuess: "unas zapatillas", hint: "Tenisky / pantofle", category: ["obleceni"] },
-
   { wordToGuess: "unos calcetines", hint: "Ponožky", category: ["obleceni"] },
   { wordToGuess: "unas medias", hint: "Punčochy", category: ["obleceni"] },
-
   { wordToGuess: "las joyas", hint: "Šperky", category: ["obleceni"] },
   { wordToGuess: "un collar", hint: "Náhrdelník", category: ["obleceni"] },
   { wordToGuess: "un anillo", hint: "Prsten", category: ["obleceni"] },
   { wordToGuess: "una cadena", hint: "Řetízek", category: ["obleceni"] },
   { wordToGuess: "una pulsera", hint: "Náramek", category: ["obleceni"] },
   { wordToGuess: "unos pendientes", hint: "Náušnice", category: ["obleceni"] },
+  {
+    wordToGuess: "abrir",
+    hint: "otevřít",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "acabado/a",
+    hint: "dokončený/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "aceite, el",
+    hint: "olej",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "acentuado/a",
+    hint: "zdůrazněný/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "actividad, la",
+    hint: "aktivita",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "acuerdo, el",
+    hint: "dohoda",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "adivinado/a",
+    hint: "uhodnutý/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "aduana, la",
+    hint: "celnice",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "aeropuerto, el",
+    hint: "letiště",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "alternativa, la",
+    hint: "alternativa",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "alusivo/a",
+    hint: "narážející, odkazující",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "América",
+    hint: "Amerika",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "amurallado/a",
+    hint: "opevněný/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "andando/a",
+    hint: "jdoucí (pěšky)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "anterioridad, la",
+    hint: "předchozí období",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "antigüedad, la",
+    hint: "starověk, stáří",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "aparcamiento, el",
+    hint: "parkoviště",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "aprovechar",
+    hint: "využít",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "arqueológico/a",
+    hint: "archeologický/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "asiático/a",
+    hint: "asijský/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "autobús, el",
+    hint: "autobus",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "avenida, la",
+    hint: "třída (městská)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "ayuntamiento, el",
+    hint: "radnice",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "balcón, el",
+    hint: "balkón",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cafetería, la",
+    hint: "kavárna",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "callejero, el",
+    hint: "uliční plán / plán města",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "carne, la",
+    hint: "maso",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "carnicería, la",
+    hint: "řeznictví",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cercanía, la",
+    hint: "blízkost, okolí",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cerrar",
+    hint: "zavřít",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "charcutería, la",
+    hint: "obchod s uzeninami",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cien",
+    hint: "sto",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cítrico, el",
+    hint: "citrusový strom",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "colegio, el",
+    hint: "škola",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "colonial",
+    hint: "koloniální",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "comercial",
+    hint: "obchodní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "comercio",
+    hint: "obchod",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "completamente",
+    hint: "zcela, úplně",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "conocido/a",
+    hint: "známý/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "conseguir",
+    hint: "dosáhnout, získat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "consulta, la",
+    hint: "konzultace, ordinace (lékařská)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "consultar",
+    hint: "poradit se",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "contar",
+    hint: "vyprávět, počítat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "convento, el",
+    hint: "klášter",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "correspondencia, la",
+    hint: "korespondence",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cruz, la",
+    hint: "kříž",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cruzar",
+    hint: "přejít, překročit",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cuarto, el",
+    hint: "pokoj",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "cuatrocientos",
+    hint: "čtyři sta",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "desconocido/a",
+    hint: "neznámý/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "diferenciar",
+    hint: "rozlišovat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "digital",
+    hint: "digitální",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "distancia",
+    hint: "vzdálenost",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "documento, el",
+    hint: "dokument",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "domingo",
+    hint: "neděle",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "doscientos",
+    hint: "dvě stě",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "entender",
+    hint: "rozumět",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "entonces",
+    hint: "tehdy, potom",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "época, la",
+    hint: "epocha, období",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "escapada, la",
+    hint: "únik, výlet (krátký)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "espalda, la",
+    hint: "záda",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "especial",
+    hint: "speciální",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "espera, la",
+    hint: "čekání",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "establecimiento, el",
+    hint: "zařízení, podnik",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "estación, la",
+    hint: "stanice, nádraží",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "estratégico/a",
+    hint: "strategický/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "excepto",
+    hint: "kromě",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "existencia, la",
+    hint: "existence",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "exportación, la",
+    hint: "export",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "fácil",
+    hint: "snadný",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "ferrocarril, el",
+    hint: "železnice",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "finalmente",
+    hint: "nakonec",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "floristería, la",
+    hint: "květinářství",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "fortaleza, la",
+    hint: "pevnost, síla",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "fuente, la",
+    hint: "pramen, fontána",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "fundación, la",
+    hint: "založení",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "fundado/a",
+    hint: "založený/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "gasolinera, la",
+    hint: "čerpací stanice",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "gira, la",
+    hint: "turné",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "guiado/a",
+    hint: "vedený/á (např. prohlídka)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "hambre, el",
+    hint: "hlad",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "histórico/a",
+    hint: "historický/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "horario, el",
+    hint: "otevírací doba / rozvrh",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "hortaliza, la",
+    hint: "zelenina",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "humanidad, la",
+    hint: "lidstvo",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "ida, la",
+    hint: "jízda tam, odjezd",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "iglesia, la",
+    hint: "kostel",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "independencia, la",
+    hint: "nezávislost",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "indeterminado/a",
+    hint: "neurčitý/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "instrucción, la",
+    hint: "instrukce",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "irregular",
+    hint: "nepravidelný/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "kilómetro, el",
+    hint: "kilometr",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "leche",
+    hint: "mléko",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "lejos",
+    hint: "daleko",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "libertad, la",
+    hint: "svoboda",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "libre",
+    hint: "volný/á, svobodný/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "librería, la",
+    hint: "knihkupectví",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "línea, la",
+    hint: "linka, čára",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "llegar a",
+    hint: "dorazit do",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "madera, la",
+    hint: "dřevo",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "mancha, la",
+    hint: "skvrna",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "manecillas, las",
+    hint: "ručičky (na hodinách)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "manzana, la",
+    hint: "jablko",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "mar, el",
+    hint: "moře",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "marítimo/a",
+    hint: "námořní, přímořský",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "medio/a",
+    hint: "střední, prostřední",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "mencionado/a",
+    hint: "zmíněný/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "mercado, el",
+    hint: "trh",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "metálico/a",
+    hint: "kovový/á, hotovost (v mincích)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "mil",
+    hint: "tisíc",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "militar",
+    hint: "vojenský/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "minuto, el",
+    hint: "minuta",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "modernista",
+    hint: "modernistický, secesní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "monasterio, el",
+    hint: "klášter",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "museo, el",
+    hint: "muzeum",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "nacional",
+    hint: "národní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "naval",
+    hint: "námořní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "neoclásico/a",
+    hint: "neoklasicistní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "novecientos",
+    hint: "devět set",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "ochocientos",
+    hint: "osm set",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "original",
+    hint: "originální",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "panadería, la",
+    hint: "pekárna",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "parada, la",
+    hint: "zastávka",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "parque, el",
+    hint: "park",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "patrimonio, el",
+    hint: "dědictví, kulturní dědictví",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "penúltimo/a",
+    hint: "předposlední",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "pescadería, la",
+    hint: "rybárna (obchod s rybami)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "pescado, el",
+    hint: "ryba (ulovená, k jídlu)",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "petróleo, el",
+    hint: "ropa",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "pino, el",
+    hint: "borovice",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "pintar",
+    hint: "malovat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "piscina, la",
+    hint: "bazén",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "planear",
+    hint: "plánovat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "precio, el",
+    hint: "cena",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "procesión, la",
+    hint: "procesí",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "producto, el",
+    hint: "produkt",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "proyección, la",
+    hint: "projekce, promítání",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "pueblo, el",
+    hint: "vesnice, lid",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "puerta, la",
+    hint: "dveře",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "puerto, el",
+    hint: "přístav",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "quinientos",
+    hint: "pět set",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "quiosco, el",
+    hint: "stánek, kiosek",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "rectificar",
+    hint: "opravit, napravit",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "refinado/a",
+    hint: "vytříbený/á, elegantní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "relacionar",
+    hint: "spojit, uvést do souvislosti",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "reloj, el",
+    hint: "hodiny, hodinky",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "reparación, la",
+    hint: "oprava",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "resto, el",
+    hint: "zbytek",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "revista, la",
+    hint: "časopis",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "ropa, la",
+    hint: "oblečení",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "saber",
+    hint: "vědět, umět",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "sacar",
+    hint: "vyndat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "sección, la",
+    hint: "oddělení, sekce",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "seiscientos",
+    hint: "šest set",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "setecientos",
+    hint: "sedm set",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "significar",
+    hint: "znamenat",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "situado/a",
+    hint: "umístěný/á, nacházející se",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "solución, la",
+    hint: "řešení",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "tachar",
+    hint: "škrtnout",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "taxi, el",
+    hint: "taxi",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "toalla, la",
+    hint: "ručník, osuška",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "transporte, el",
+    hint: "doprava",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "tren, el",
+    hint: "vlak",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "trescientos",
+    hint: "tři sta",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "turismo, el",
+    hint: "turistika",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "turista, el",
+    hint: "turista",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "turístico/a",
+    hint: "turistický/á",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "universitario/a",
+    hint: "univerzitní",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "viaje, el",
+    hint: "cesta, výlet",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "visita, la",
+    hint: "návštěva",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "zapatería, la",
+    hint: "obuvnictví",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "zapato, el",
+    hint: "bota, střevíc",
+    category: ["lekce5"],
+  },
+  {
+    wordToGuess: "absolutamente",
+    hint: "naprosto, absolutně",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "abundante",
+    hint: "hojný, vydatný",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "acompañado/a",
+    hint: "doprovázený/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "acuático/a",
+    hint: "vodní",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "acostarse",
+    hint: "jít si lehnout",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "afición, la",
+    hint: "záliba, koníček",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "aficionado/a",
+    hint: "nadšenec, fanoušek (dělající něco s nadšením)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "agenda, la",
+    hint: "diář",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ahorrar",
+    hint: "šetřit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "alpinismo, el",
+    hint: "horolezectví",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "andar",
+    hint: "jít, chodit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "aperitivo, el",
+    hint: "aperitiv",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "árbitro, el",
+    hint: "rozhodčí",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "atasco, el",
+    hint: "dopravní zácpa",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "atletismo, el",
+    hint: "atletika",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "avión, el",
+    hint: "letadlo",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "baile, el",
+    hint: "tanec",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "balón, el",
+    hint: "míč",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "baloncesto, el",
+    hint: "basketbal",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "bañarse",
+    hint: "koupat se",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "bebida, la",
+    hint: "nápoj",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "beicon, el",
+    hint: "slanina",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "calor, el",
+    hint: "teplo",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "caro/a",
+    hint: "drahý/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "cazo, el",
+    hint: "naběračka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "cena, la",
+    hint: "večeře",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "charlar",
+    hint: "povídat si, klábosit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "China",
+    hint: "Čína",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ciclismo, el",
+    hint: "cyklistika",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ciencia, la",
+    hint: "věda",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "coger",
+    hint: "vzít",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "coleccionar",
+    hint: "sbírat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "comentar",
+    hint: "komentovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "competitivo/a",
+    hint: "soutěživý/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "compra, la",
+    hint: "nákup",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "común",
+    hint: "společný, běžný",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "comunicar",
+    hint: "komunikovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "copa, la",
+    hint: "sklenice",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "coser",
+    hint: "šít",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "costumbre, la",
+    hint: "zvyk",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "cronológico/a",
+    hint: "chronologický/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "cuerda, la",
+    hint: "provaz",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "cultivar",
+    hint: "pěstovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "dentista, el/la",
+    hint: "zubař/ka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "deporte, el",
+    hint: "sport",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "desayuno, el",
+    hint: "snídaně",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "descansar",
+    hint: "odpočívat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "descanso, el",
+    hint: "pauza",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "descubrir",
+    hint: "objevit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "despertador, el",
+    hint: "budík",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "despertarse",
+    hint: "probudit se",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "diario/a",
+    hint: "denní",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "dormir",
+    hint: "spát",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ducha, la",
+    hint: "sprcha",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ducharse",
+    hint: "sprchovat se",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "elaborar",
+    hint: "vypracovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "encantar",
+    hint: "nadchnout, okouzlit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "encuesta, la",
+    hint: "anketa",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "entrenar",
+    hint: "trénovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "enviar",
+    hint: "poslat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "escalar",
+    hint: "lézt (po něčem)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "espinacas, las",
+    hint: "špenát",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "esquí, el",
+    hint: "lyže",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "esquiar",
+    hint: "lyžovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "expresar",
+    hint: "vyjádřit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "favorito/a",
+    hint: "oblíbený/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ficción, la",
+    hint: "fikce",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "figura, la",
+    hint: "postava, figura",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "fotografía, la",
+    hint: "fotografie",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "frecuencia, la",
+    hint: "frekvence",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "frecuente",
+    hint: "častý",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "frijoles, los",
+    hint: "fazole",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "gimnasia, la",
+    hint: "gymnastika",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "gimnasio, el",
+    hint: "posilovna",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "gol, el",
+    hint: "branka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "golf, el",
+    hint: "golf",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "hábito, el",
+    hint: "zvyk",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "habitual",
+    hint: "obvyklý, běžný",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "habitualmente",
+    hint: "obvykle",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "huevo, el",
+    hint: "vejce",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ilustrativo/a",
+    hint: "výmluvný, ilustrující",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "informe, el",
+    hint: "zpráva",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "instituto, el",
+    hint: "institut, střední škola (vyšší ročníky)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "interactuar",
+    hint: "interagovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "invierno, el",
+    hint: "zima",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "jardinería, la",
+    hint: "zahradničení",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "judías, las",
+    hint: "fazole",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "juerga, la",
+    hint: "veselí, zábava",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "jugar",
+    hint: "hrát",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "limpiar",
+    hint: "uklízet",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "lista, la",
+    hint: "seznam",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "mandar",
+    hint: "poslat, přikázat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "mantequilla, la",
+    hint: "máslo",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "mayoría, la",
+    hint: "většina",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "mediodía, el",
+    hint: "poledne",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "mensaje, el",
+    hint: "zpráva",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "menú, el",
+    hint: "jídelní lístek, menu",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "merendar",
+    hint: "svačit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "merienda, la",
+    hint: "svačina",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "momento, el",
+    hint: "okamžik",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "moneda, la",
+    hint: "mince, měna",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "montañero/a, el/la",
+    hint: "horolezec",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "motivo, el",
+    hint: "důvod, motiv",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "municipal",
+    hint: "městský",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "música, la",
+    hint: "hudba",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "nadar",
+    hint: "plavat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "natación, la",
+    hint: "plavání",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "navegar",
+    hint: "plavit se, navigovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "necesitar",
+    hint: "potřebovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "nocturno/a",
+    hint: "noční",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ocupado/a",
+    hint: "obsazený/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "oliva, la",
+    hint: "oliva",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ordenar",
+    hint: "uspořádat, přikázat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "oscuro/a",
+    hint: "tmavý/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "parecer",
+    hint: "zdát se",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "partido, el",
+    hint: "zápas, strana (politická)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pasear",
+    hint: "jít na procházku",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "paseo, el",
+    hint: "procházka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pausa, la",
+    hint: "pauza",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pelota, la",
+    hint: "míč",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "permitir",
+    hint: "dovolit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pescar",
+    hint: "rybařit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "picante",
+    hint: "pálivý, ostrý",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pincho, el",
+    hint: "špíz",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pista, la",
+    hint: "dráha, piste (na lyžování), stopa",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "plato, el",
+    hint: "talíř",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "playa, la",
+    hint: "pláž",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "polideportivo, el",
+    hint: "sportovní centrum",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "portero/a, el/la",
+    hint: "vrátný/á, brankář/ka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "postre, el",
+    hint: "dezert",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "profesional",
+    hint: "profesionální",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "pronto",
+    hint: "brzy",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "proyecto, el",
+    hint: "projekt",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "quedarse",
+    hint: "zůstat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "rápido/a",
+    hint: "rychlý/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "raqueta, la",
+    hint: "tenisová raketa",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "rato, el",
+    hint: "chvilka",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "recolectar",
+    hint: "sbírat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "relajado/a",
+    hint: "uvolněný/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "relajarse",
+    hint: "uvolnit se, relaxovat",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "reunión, la",
+    hint: "schůze, setkání",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "risa, la",
+    hint: "smích",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "ruido, el",
+    hint: "hluk",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "rutina, la",
+    hint: "rutina",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "sano/a",
+    hint: "zdravý/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "secreto/a",
+    hint: "tajný/á",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "senderismo, el",
+    hint: "turistika, pěší turistika",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "seta, la",
+    hint: "hřib, houba",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "siesta, la",
+    hint: "siesta (odpolední spánek)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "similitud, la",
+    hint: "podobnost",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "solamente",
+    hint: "pouze, jen",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "sur",
+    hint: "jih",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tampoco",
+    hint: "také ne",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tapas, las",
+    hint: "tapas (španělské malé pokrmy)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tapeo, el",
+    hint: "chodit na tapas",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "té, el",
+    hint: "čaj",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tele, la",
+    hint: "televize",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tema, el",
+    hint: "téma",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "terraza, la",
+    hint: "terasa",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "texto, el",
+    hint: "text",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tiempo, el",
+    hint: "čas, počasí",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tirar",
+    hint: "vyhodit, hodit",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "toalla, la",
+    hint: "ručník",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tortilla, la",
+    hint: "tortilla (španělská omeleta)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tostada, la",
+    hint: "toasts (opečený chléb)",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "tumbado/a",
+    hint: "ležící",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "urbanización, la",
+    hint: "sídliště",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "vestido, el",
+    hint: "šaty",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "vestirse",
+    hint: "obléknout se",
+    category: ["lekce6"],
+  },
+  {
+    wordToGuess: "vuelta, la",
+    hint: "návrat, obrat",
+    category: ["lekce6"],
+  },
 ];
 
 const params = new URLSearchParams(window.location.search);
