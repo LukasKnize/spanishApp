@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spanish Verb Trainer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2em;
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+      .card {
+        background: white;
+        padding: 2em;
+        margin: auto;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        margin-bottom: 0.5em;
+      }
+      .prompt {
+        font-size: 1.2em;
+        margin: 1em 0;
+      }
+      input {
+        font-size: 1.2em;
+        padding: 0.5em;
+        width: 80%;
+        margin-bottom: 1em;
+      }
+      button {
+        padding: 0.5em 1em;
+        font-size: 1em;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Spanish Verb Trainer</h1>
+      <div class="prompt" id="question"></div>
+      <input type="text" id="answer" placeholder="Type the conjugation..." autocomplete="off" />
+      <br />
+      <button onclick="checkAnswer()">Submit</button>
+      <p id="feedback"></p>
+    </div>
+
+    <script>
+      const verbs = [
+        ["ir", "voy", "vas", "va", "vamos", "vais", "van"],
+        ["seguir", "sigo", "sigues", "sigue", "seguimos", "seguís", "siguen"],
+        ["cerrar", "cierro", "cierras", "cierra", "cerramos", "cerráis", "cierran"],
+        ["dar", "doy", "das", "da", "damos", "dais", "dan"],
+        ["empezar", "empizo", "empiezas", "empieza", "empezamos", "empezáis", "empiezan"],
+        ["hacer", "hago", "haces", "hace", "hacemos", "hacéis", "hacen"],
+        ["poder", "puedo", "puedes", "puede", "podemos", "podéis", "pueden"],
+        ["querer", "quiero", "quieres", "quiere", "queremos", "queréis", "quieren"],
+        ["pedir", "pido", "pides", "pide", "pedimos", "pedís", "piden"],
+        ["tener", "tengo", "tienes", "tiene", "tenemos", "tenéis", "tienen"],
+        ["poner", "pongo", "pones", "pone", "ponemos", "ponéis", "ponen"],
+      ];
+
+      const pronouns = ["yo", "tú", "él/ella/usted", "nosotros", "vosotros", "ellos/ellas/ustedes"];
+      let currentVerb, currentPronounIndex;
+      let attempts = 0;
+      let locked = false;
+
+      function newQuestion() {
+        const verbData = verbs[Math.floor(Math.random() * verbs.length)];
+        currentVerb = verbData;
+        currentPronounIndex = Math.floor(Math.random() * 6);
+        attempts = 0;
+        locked = false;
+
+        document.getElementById(
+          "question"
+        ).innerText = `${verbData[0]} — ${pronouns[currentPronounIndex]}`;
+        document.getElementById("answer").value = "";
+        document.getElementById("feedback").innerText = "";
+        document.getElementById("answer").focus();
+      }
+
+      function checkAnswer() {
+        if (locked) return;
+
+        const inputElement = document.getElementById("answer");
+        let userInput = inputElement.value.trim().toLowerCase();
+        const correct = currentVerb[currentPronounIndex + 1].toLowerCase();
+        const feedback = document.getElementById("feedback");
+
+        if (userInput === correct) {
+          feedback.innerText = "✅ Correct!";
+          feedback.className = "correct";
+          locked = true;
+          setTimeout(newQuestion, 1000);
+        } else {
+          attempts++;
+          if (attempts >= 3) {
+            feedback.innerText = `❌ Incorrect. The correct answer was: "${correct}".`;
+            feedback.className = "incorrect";
+            locked = true;
+            setTimeout(newQuestion, 2000);
+          } else {
+            feedback.innerText = `❌ Try again (${attempts}/3).`;
+            feedback.className = "incorrect";
+          }
+        }
+      }
+
+      // Allow pressing "Enter" to submit
+      document.getElementById("answer").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          checkAnswer();
+        }
+      });
+
+      // Start the game
+      newQuestion();
+    </script>
+  </body>
+</html>

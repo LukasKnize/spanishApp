@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spanish Verb Conjugation Trainer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 2em;
+        text-align: center;
+      }
+      .card {
+        background: white;
+        padding: 2em;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        padding: 0.4em;
+        font-size: 1em;
+        width: 60%;
+      }
+      table {
+        margin: 1em auto;
+        width: 100%;
+        max-width: 400px;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 0.5em;
+        font-size: 1em;
+      }
+      button {
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+      .feedback-cell {
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Conjugate the Verb</h2>
+      <h3 id="verb"></h3>
+      <form id="form" onsubmit="return false;">
+        <table>
+          <tbody id="inputsTable">
+            <!-- Dynamically filled -->
+          </tbody>
+        </table>
+        <button onclick="checkAnswers()">Submit</button>
+        <p id="resultMsg"></p>
+      </form>
+    </div>
+
+    <script>
+      const verbs = [
+        [
+          "despertarse",
+          "me despierto",
+          "te despiertas",
+          "se despierta",
+          "nos despertamos",
+          "os despertáis",
+          "se despiertan",
+        ],
+        [
+          "levantarse",
+          "me levanto",
+          "te levantas",
+          "se levanta",
+          "nos levantamos",
+          "os levantáis",
+          "se levantan",
+        ],
+        [
+          "ducharse",
+          "me ducho",
+          "te duchas",
+          "se ducha",
+          "nos duchamos",
+          "os ducháis",
+          "se duchan",
+        ],
+        [
+          "acostarse",
+          "me acuesto",
+          "te acuestas",
+          "se acuesta",
+          "nos acostamos",
+          "os acostáis",
+          "se acuestan",
+        ],
+        ["lavarse", "me lavo", "te lavas", "se lava", "nos lavamos", "os laváis", "se lavan"],
+        ["vestirse", "me visto", "te vistes", "se viste", "nos vestimos", "os vestís", "se visten"],
+        ["bañarse", "me baño", "te bañas", "se baña", "nos bañamos", "os bañáis", "se bañan"],
+        ["bajarse", "me bajo", "te bajas", "se baja", "nos bajamos", "os bajáis", "se bajan"],
+      ];
+
+      const pronouns = ["yo", "tú", "él/ella/usted", "nosotros", "vosotros", "ellos/ellas/ustedes"];
+      let currentVerb;
+      let lastVerb;
+
+      function loadVerb() {
+        let newVerb;
+        while (true) {
+          newVerb = Math.floor(Math.random() * verbs.length);
+          if (newVerb !== lastVerb) {
+            lastVerb = newVerb;
+            break;
+          }
+        }
+        const verbData = verbs[newVerb];
+        currentVerb = verbData;
+        attempts = 0;
+        document.getElementById("verb").innerText = verbData[0];
+        const tbody = document.getElementById("inputsTable");
+        tbody.innerHTML = "";
+
+        pronouns.forEach((pronoun, i) => {
+          const row = document.createElement("tr");
+
+          const pronounCell = document.createElement("td");
+          pronounCell.textContent = pronoun;
+
+          const inputCell = document.createElement("td");
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = `input${i}`;
+          input.autocomplete = "off";
+          inputCell.appendChild(input);
+
+          const feedbackCell = document.createElement("td");
+          feedbackCell.className = "feedback-cell";
+          feedbackCell.id = `feedback${i}`;
+
+          row.appendChild(pronounCell);
+          row.appendChild(inputCell);
+          row.appendChild(feedbackCell);
+          tbody.appendChild(row);
+        });
+
+        document.getElementById("resultMsg").innerText = "";
+      }
+
+      function checkAnswers() {
+        let correctCount = 0;
+
+        for (let i = 0; i < 6; i++) {
+          const input = document.getElementById(`input${i}`);
+          const feedback = document.getElementById(`feedback${i}`);
+          const answer = input.value.trim().toLowerCase();
+          const correct = currentVerb[i + 1].toLowerCase();
+
+          if (answer === correct) {
+            feedback.textContent = "✅";
+            feedback.className = "correct";
+          } else {
+            feedback.textContent = "❌";
+            feedback.className = "incorrect";
+          }
+
+          if (answer === correct) correctCount++;
+        }
+
+        if (correctCount === 6) {
+          document.getElementById("resultMsg").innerText = "✅ All correct! Loading next verb...";
+          setTimeout(loadVerb, 1500);
+        } else {
+          attempts++;
+          if (attempts >= 3) {
+            document.getElementById("resultMsg").innerText = "❌ Showing correct answers...";
+            for (let i = 0; i < 6; i++) {
+              const input = document.getElementById(`input${i}`);
+              input.value = currentVerb[i + 1];
+            }
+            setTimeout(loadVerb, 2500);
+          } else {
+            document.getElementById("resultMsg").innerText = `❌ ${
+              6 - correctCount
+            } incorrect. Try again (${attempts}/3)`;
+          }
+        }
+      }
+
+      loadVerb();
+    </script>
+  </body>
+</html>
